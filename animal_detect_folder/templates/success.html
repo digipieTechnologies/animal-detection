@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #7e6c6c;
+        }
+
+        .container {
+            text-align: center;
+            padding: 50px;
+            background-color: #583c3c;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            color: #fff;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        a {
+            color: #00f;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Files Processed Successfully!</h1>
+        <p>Your files have been successfully processed. You can <a href="{% url 'upload_folder' %}">return to the upload
+                page</a>.</p>
+    </div>
+</body>
+
+</html>
