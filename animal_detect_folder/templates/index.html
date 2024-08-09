@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Folder</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #7e6c6c;
+        }
+
+        .container {
+            text-align: center;
+            padding: 50px;
+            background-color: #583c3c;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #fff;
+
+        }
+
+        input[type="file"] {
+            width: 100%;
+            max-width: 400px;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+
+        }
+
+        button {
+            width: 100%;
+            max-width: 200px;
+            padding: 10px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            box-sizing: border-box;
+
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Upload Folder</h1>
+        <form id="upload-form" enctype="multipart/form-data" method="POST" action="{% url 'upload_folder' %}">
+            {% csrf_token %}
+            <input type="file" id="file-input" name="files" webkitdirectory mozdirectory msdirectory odirectory
+                directory multiple>
+            <br>
+            <button type="submit">Upload</button>
+        </form>
+    </div>
+</body>
+
+</html>
